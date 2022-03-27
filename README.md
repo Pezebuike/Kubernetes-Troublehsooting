@@ -8,8 +8,6 @@ This section consists of security recommendation for the direct configuration of
 **Health Check Probe in Kubernetes**
 
 **1. Startup Probe(TCP)**
-- First is TCP probe in this we uses TCP socket. The kubelet will attempt to open a socket to your container on the specified port.
--  If it can establish a connection, the container is considered healthy, if it can't it is considered a failure.
 
 **2. **
 
