@@ -7,9 +7,16 @@ This section consists of security recommendation for the direct configuration of
 
 **Health Check Probe in Kubernetes**
 
-**1. Startup Probe(TCP)**
+**1. Startup Probe**
+Whenever we are dealin with legacy application which require extra time startup time at first initialization. In this case, we have a tendency to established a startup probe with the constant command, protocol, or TCP check. with a **failureThreshold * periodSeconds**
 
-**2. **
+The application will have a maximum of 5 minutes (30 * 10 = 300s) to finish its startup.
+
+**2. Rediness Probe**
+Readiness probe checks whether your application is ready to serve the requests. A pod with containers reporting that they are not ready does not receive traffic through Kubernetes Services.
+
+**3. Liveness Probe**
+Liveness probe checks the status of the container (whether it is running or not). If the liveness probe fails, then automatically container move on with its restart policy.
 
 # 1.1.1 API server
 
