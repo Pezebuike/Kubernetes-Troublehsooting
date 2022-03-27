@@ -5,6 +5,14 @@ This section consists of security recommendation for the direct configuration of
 
 # 1.1 Master Node Configuration Files
 
+**Health Check Probe in Kubernetes**
+
+**1. Startup Probe(TCP)**
+- First is TCP probe in this we uses TCP socket. The kubelet will attempt to open a socket to your container on the specified port.
+-  If it can establish a connection, the container is considered healthy, if it can't it is considered a failure.
+
+**2. **
+
 # 1.1.1 API server
 
 - Ensure that the API server pod specification file permissions are set to 644 or more restrictive
